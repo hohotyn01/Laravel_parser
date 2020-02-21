@@ -15,15 +15,8 @@ class Parser extends Controller
         $this->articleService = $articleService;
     }
 
-//    public function get()
-//    {
-//        return view('welcome', ['articles' => $this->articleService->selectArticles()]);
-//    }
-
     public function get()
     {
-//        dd(json_encode($this->articleService->selectArticles()->items()));
-//        return json_encode($this->articleService->selectArticles()->items());
         return view('welcome', ['articles' => $this->articleService->selectArticles()]);
     }
 

@@ -11,6 +11,5 @@
 |
 */
 
-Route::view('/', 'welcome');
-Route::get('/get', 'Parser@get');
+Route::get('/', 'Parser@get')->name('parser');
 

@@ -24,6 +24,6 @@ class ArticleRepository extends BaseRepository
 
     public function articlesPaginate()
     {
-        return Article::OrderBy('date', 'DESC')->simplePaginate(10);
+        return Article::latest('date')->paginate(10);
     }
 }
