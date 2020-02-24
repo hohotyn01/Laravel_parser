@@ -9,12 +9,8 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="{{asset('assets/datatables.min.css')}}">
-        <style>
-            .page-item{
-                display: inline-block;
-                padding: 10px;
-            }
-        </style>
+
+        <link rel="stylesheet" type="text/css" href="{{asset('assets/MyStyle/style.css')}}">
     </head>
     <body>
             {{$articles->links()}}
@@ -29,8 +25,6 @@
                 <tbody>
                     @forelse($articles as $article)
                         <tr>
-                            <td>{{$article->id}}</td>
-
                             <td><a href="{{$article->link}}" target="_blank">{{$article->title}}</a></td>
                             <td><img src="{{$article->image}}" width=330px, height=220px/, alt="empty"></td>
                             <td>{{$article->date}}</td>

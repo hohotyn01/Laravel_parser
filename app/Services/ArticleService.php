@@ -17,7 +17,7 @@ class ArticleService
         $this->articleRepository = $ArticleRepository;
     }
 
-    public function selectArticles() :array
+    public function selectArticles()
     {
         return $this->articleRepository->articlesPaginate() ?: [];
     }
