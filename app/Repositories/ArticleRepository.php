@@ -14,7 +14,7 @@ class ArticleRepository extends BaseRepository
 
     public function insertArticles($articles)
     {
-        return Article::insert($articles);
+        return Article::insertGetId($articles);
     }
 
     public function findArticle($idArticle)

@@ -17,12 +17,12 @@ class ArticleService
         $this->articleRepository = $ArticleRepository;
     }
 
-    public function selectArticles()
+    public function selectArticles() :array
     {
-        return $this->articleRepository->articlesPaginate();
+        return $this->articleRepository->articlesPaginate() ?: [];
     }
 
-    public function insert(array $oneDaysArticles) :void
+    public function insert(array $oneDaysArticles)
     {
         foreach ($oneDaysArticles as $articles) {
             foreach ($articles as $article) {

@@ -17,7 +17,6 @@
         </style>
     </head>
     <body>
-        @if(isset($articles))
             {{$articles->links()}}
             <table id="table_id" class="display">
                 <thead>
@@ -30,6 +29,8 @@
                 <tbody>
                     @forelse($articles as $article)
                         <tr>
+                            <td>{{$article->id}}</td>
+
                             <td><a href="{{$article->link}}" target="_blank">{{$article->title}}</a></td>
                             <td><img src="{{$article->image}}" width=330px, height=220px/, alt="empty"></td>
                             <td>{{$article->date}}</td>
@@ -40,7 +41,6 @@
                 </tbody>
             </table>
             {{$articles->links()}}
-        @endif
     </body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="{{asset('assets/datatables.min.js')}}"></script>

@@ -20,6 +20,12 @@ class Parser extends Controller
         return view('welcome', ['articles' => $this->articleService->selectArticles()]);
     }
 
+    public function test()
+    {
+        dump($this->articleService->parser());
+        dd($this->insertData($this->articleService->parser()));
+    }
+
     public function getParsing()
     {
         $this->insertData($this->articleService->parser());
