@@ -17,7 +17,6 @@ class Parser extends Controller
 
     public function get()
     {
-        dump($this->articleService->selectArticles());
         return view('welcome', ['articles' => $this->articleService->selectArticles()]);
     }
 
