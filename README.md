@@ -14,7 +14,8 @@ This parsing occurs on the site of the correspondent.
 ```
 1. Git clone git@github.com:hohotyn01/parse_news.git
 2. Write your credential for DB in .env
-3. php artisan key:generate
+3. php artisan migrate
+4. php artisan key:generate
 ```
 
 ## Comand
