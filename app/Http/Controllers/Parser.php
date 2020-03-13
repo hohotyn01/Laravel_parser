@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Services\ArticleService;
 
 class Parser extends Controller
@@ -22,13 +21,15 @@ class Parser extends Controller
 
     public function getParsing()
     {
-        $this->insertData($this->articleService->parser());
+        try {
 
-        return('success');
-    }
+            $allDataCorespondent = $this->articleService->parser();
+        }catch (\Exception $e){
+            dd('Parsing failed');
+        }
 
-    public function insertData(array $articlesOneDays)
-    {
-        $this->articleService->insert($articlesOneDays);
+        $this->articleService->insert($allDataCorespondent);
+
+        dump ('success');
     }
 }

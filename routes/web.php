@@ -12,5 +12,4 @@
 */
 
 Route::get('/', 'Parser@get')->name('parser');
-Route::get('/test', 'Parser@test')->name('test');
-
+Route::get('/parsing', 'Parser@getParsing');

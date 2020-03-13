@@ -41,6 +41,11 @@ class ArticleService
             'https://ua.korrespondent.net/ajax/module.aspx?spm_id=1055&type=-1&IsAjax=true'
         );
 
+        if(!is_string($str))
+        {
+            return [];
+        }
+
         $crawler = new Crawler($str);
 
         return $this->getData($crawler);
