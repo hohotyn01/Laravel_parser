@@ -7,7 +7,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-# parse_news
+# Parse News
 This parsing occurs on the site of the correspondent.
 
 ## Install
