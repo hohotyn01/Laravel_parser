@@ -12,4 +12,6 @@
 */
 
 Route::get('/', 'Parser@get')->name('parser');
-Route::get('/parsing', 'Parser@getParsing');
+Route::get('/parseCorespondent', 'Parser@ParsingCorespondent');
+Route::get('/getTsn', 'Parser@GetTsn');
+Route::get('/parseTsn', 'Parser@ParsingTsn');

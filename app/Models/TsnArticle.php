@@ -4,8 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Article extends Model
+class TsnArticle extends Model
 {
-    protected $table = "articles";
-
+    protected $table = "tsn_articles";
 }

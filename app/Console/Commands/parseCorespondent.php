@@ -40,6 +40,6 @@ class parseCorespondent extends Command
      */
     public function handle()
     {
-        $this->parser->getParsing();
+        $this->parser->getParsingCorespondent();
     }
 }
